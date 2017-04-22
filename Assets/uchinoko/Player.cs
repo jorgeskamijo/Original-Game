@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
             anim.SetTrigger("shot");
             Instantiate(bullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
         }
+
     }
 
     void FixedUpdate()
