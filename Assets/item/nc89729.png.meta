@@ -1,0 +1,1244 @@
+fileFormatVersion: 2
+guid: c78bbc7598bedf144b25284d89c53073
+timeCreated: 1492955521
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: nc89729_0
+    21300002: nc89729_1
+    21300004: nc89729_2
+    21300006: nc89729_3
+    21300008: nc89729_4
+    21300010: nc89729_5
+    21300012: nc89729_6
+    21300014: nc89729_7
+    21300016: nc89729_8
+    21300018: nc89729_9
+    21300020: nc89729_10
+    21300022: nc89729_11
+    21300024: nc89729_12
+    21300026: nc89729_13
+    21300028: nc89729_14
+    21300030: nc89729_15
+    21300032: nc89729_16
+    21300034: nc89729_17
+    21300036: nc89729_18
+    21300038: nc89729_19
+    21300040: nc89729_20
+    21300042: nc89729_21
+    21300044: nc89729_22
+    21300046: nc89729_23
+    21300048: nc89729_24
+    21300050: nc89729_25
+    21300052: nc89729_26
+    21300054: nc89729_27
+    21300056: nc89729_28
+    21300058: nc89729_29
+    21300060: nc89729_30
+    21300062: nc89729_31
+    21300064: nc89729_32
+    21300066: nc89729_33
+    21300068: nc89729_34
+    21300070: nc89729_35
+    21300072: nc89729_36
+    21300074: nc89729_37
+    21300076: nc89729_38
+    21300078: nc89729_39
+    21300080: nc89729_40
+    21300082: nc89729_41
+    21300084: nc89729_42
+    21300086: nc89729_43
+    21300088: nc89729_44
+    21300090: nc89729_45
+    21300092: nc89729_46
+    21300094: nc89729_47
+    21300096: nc89729_48
+    21300098: nc89729_49
+    21300100: nc89729_50
+    21300102: nc89729_51
+    21300104: nc89729_52
+    21300106: nc89729_53
+    21300108: nc89729_54
+    21300110: nc89729_55
+    21300112: nc89729_56
+    21300114: nc89729_57
+    21300116: nc89729_58
+    21300118: nc89729_59
+    21300120: nc89729_60
+    21300122: nc89729_61
+    21300124: nc89729_62
+    21300126: nc89729_63
+    21300128: nc89729_64
+    21300130: nc89729_65
+    21300132: nc89729_66
+    21300134: nc89729_67
+    21300136: nc89729_68
+    21300138: nc89729_69
+    21300140: nc89729_70
+    21300142: nc89729_71
+    21300144: nc89729_72
+    21300146: nc89729_73
+    21300148: nc89729_74
+    21300150: nc89729_75
+    21300152: nc89729_76
+    21300154: nc89729_77
+    21300156: nc89729_78
+    21300158: nc89729_79
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nc89729_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2298
+        width: 219
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_1
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 2276
+        width: 151
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_2
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 2274
+        width: 206
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_3
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 2280
+        width: 207
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_4
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 2278
+        width: 148
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_5
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 2287
+        width: 229
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_6
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 2277
+        width: 170
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_7
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 2288
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2060
+        width: 220
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 2038
+        width: 151
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_10
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 2037
+        width: 205
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_11
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 2042
+        width: 206
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_12
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 2040
+        width: 148
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_13
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 2049
+        width: 228
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_14
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 2040
+        width: 170
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_15
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 2050
+        width: 193
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1802
+        width: 220
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_17
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1780
+        width: 151
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_18
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1778
+        width: 205
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_19
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1783
+        width: 206
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_20
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 1782
+        width: 148
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_21
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 1790
+        width: 228
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_22
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1783
+        width: 170
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_23
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1793
+        width: 193
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1545
+        width: 219
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_25
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1524
+        width: 151
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_26
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1522
+        width: 206
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_27
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 1526
+        width: 207
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_28
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 1525
+        width: 148
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_29
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1534
+        width: 229
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_30
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1525
+        width: 170
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_31
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 1535
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_32
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1279
+        width: 218
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_33
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1258
+        width: 151
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_34
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1256
+        width: 205
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_35
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1260
+        width: 206
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_36
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1259
+        width: 148
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_37
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1268
+        width: 227
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_38
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1259
+        width: 169
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_39
+      rect:
+        serializedVersion: 2
+        x: 1802
+        y: 1269
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1022
+        width: 218
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_41
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1002
+        width: 152
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_42
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 999
+        width: 205
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_43
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 1004
+        width: 206
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_44
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 1003
+        width: 146
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_45
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 1011
+        width: 227
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_46
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 1003
+        width: 170
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_47
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1014
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_48
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 777
+        width: 220
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_49
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 755
+        width: 151
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_50
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 754
+        width: 205
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_51
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 759
+        width: 206
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_52
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 757
+        width: 148
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_53
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 766
+        width: 228
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_54
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 757
+        width: 170
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_55
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 767
+        width: 193
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 527
+        width: 218
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_57
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 506
+        width: 152
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_58
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 504
+        width: 205
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_59
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 508
+        width: 205
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_60
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 507
+        width: 146
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_61
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 516
+        width: 227
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_62
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 507
+        width: 169
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_63
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 517
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 269
+        width: 218
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_65
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 248
+        width: 152
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_66
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 246
+        width: 205
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_67
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 252
+        width: 205
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_68
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 250
+        width: 146
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_69
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 258
+        width: 227
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_70
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 251
+        width: 169
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_71
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 261
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_72
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 26
+        width: 219
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_73
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 6
+        width: 151
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_74
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 3
+        width: 206
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_75
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 8
+        width: 207
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_76
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 7
+        width: 148
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_77
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 15
+        width: 229
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_78
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 8
+        width: 170
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: nc89729_79
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 18
+        width: 194
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

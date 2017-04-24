@@ -5,9 +5,8 @@ using UnityEngine.UI;
 public class LifeScript : MonoBehaviour
 {
 
-    RectTransform rt;
+    public　RectTransform rt;
     public GameObject eddy; //ユニティちゃん
-    public GameObject explosion; //爆発アニメーション
     public Text gameOverText; //ゲームオーバーの文字
     private bool gameOver = false; //ゲームオーバー判定
 
@@ -20,13 +19,7 @@ public class LifeScript : MonoBehaviour
         //ライフが0以下になった時、
         if (rt.sizeDelta.x <= 0)
         {
-            //ゲームオーバー判定がfalseなら爆発アニメーションを生成
-            //GameOverメソッドでtrueになるので、1回のみ実行
-            if (gameOver == false)
-            {
-                Instantiate(explosion, eddy.transform.position + new Vector3(0, 1, 0), eddy.transform.rotation);
-            }
-            //ゲームオーバー判定をtrueにし、ユニティちゃんを消去
+            //ゲームオーバー判定をtrue
             GameOver();
         }
         //ゲームオーバー判定がtrueの時、
@@ -53,6 +46,6 @@ public class LifeScript : MonoBehaviour
     public void GameOver()
     {
         gameOver = true;
-        Destroy(eddy);
+        
     }
 }

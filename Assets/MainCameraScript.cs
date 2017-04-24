@@ -21,6 +21,5 @@ public class MainCameraScript : MonoBehaviour {
     {
         //Unityちゃんの位置に合わせてカメラの位置を移動
         this.transform.position = new Vector3(this.Player.transform.position.x, this.Player.transform.position.y, this.transform.position.z);
-        return;
     }
 }

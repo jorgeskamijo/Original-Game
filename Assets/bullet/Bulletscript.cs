@@ -20,12 +20,12 @@ public class Bulletscript : MonoBehaviour
         temp.x = player.transform.localScale.x;
         transform.localScale = temp;
         //5秒後に消滅
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 1);
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "enemy")
+        if (col.gameObject.tag == "enemy"||col.gameObject.tag == "Ground")
         {
             Destroy(gameObject);
         }
