@@ -5,11 +5,11 @@ public class enemyscript1 : MonoBehaviour
 {
 
     Rigidbody2D rigidbody2D;
-    private float speed = 2f;
+    private float speed = 2.2f;
 
     public GameObject itemr;
     private int hp = 2;
-    public int ap = 32;
+    public int ap = 64;
     private LifeScript lifeScript;
     private Transform player;
     public GameObject explosion;

@@ -8,8 +8,8 @@ public class enemyscript2 : MonoBehaviour
     private float speed = 3f;
 
     public GameObject items;
-    private int hp = 5;
-    public int ap = 16;
+    private int hp = 4;
+    public int ap = 64;
     private LifeScript lifeScript;
     private Transform player;
     public GameObject explosion;

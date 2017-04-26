@@ -5,8 +5,8 @@ public class elevaterscript : MonoBehaviour
 {
 
     Rigidbody2D rigidbody2D;
-    private int speed = 7;
-    private int degree = 0;
+    private float speed = 8.0f;
+    private float degree = 0;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();

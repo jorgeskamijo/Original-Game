@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
+    float intervalTime;
     public float speed = 4f; //歩くスピード
-    public float jumpPower = 700; //ジャンプ力
+    public float jumpPower = 750; //ジャンプ力
     public GameObject bullet;
     private Rigidbody2D rigidbody2D;
     private Animator anim;
@@ -16,6 +16,14 @@ public class Player : MonoBehaviour
     private bool gameOver = false; //ゲームオーバーしたら操作を無効にする
     private GameObject scoreText;
     private int score = 0;
+    //左ボタン押下の判定（追加）
+    private bool isLButtonDown = false;
+    //右ボタン押下の判定（追加）
+    private bool isRButtonDown = false;
+    //Jボタン押下の判定（追加）
+    private bool isJumpButtonDown = false;
+    //Jボタン押下の判定（追加）
+    private bool isShotButtonDown = false;
 
     void Start()
     {
@@ -47,7 +55,7 @@ public class Player : MonoBehaviour
 		//レイヤーをPlayerDamageに変更
 		gameObject.layer = LayerMask.NameToLayer("PlayerDamage");
 		//while文を10回ループ
-		int count = 10;
+		int count = 20;
 		while (count > 0){
 			//透明にする
 			renderer.material.color = new Color (1,1,1,0);
@@ -75,7 +83,7 @@ public class Player : MonoBehaviour
         if (!gameOver)
         {
             //スペースキーを押し、
-            if (Input.GetKeyDown("space"))
+            if (Input.GetKeyDown("space") || this.isJumpButtonDown)
       　　  {
             //着地していた時、
           　  if (isGrounded)
@@ -102,10 +110,17 @@ public class Player : MonoBehaviour
 
         if (!gameOver)
         {
-            if (Input.GetKeyDown("left ctrl"))
+            intervalTime += Time.deltaTime;
+            if (Input.GetKeyDown("left ctrl") || this.isShotButtonDown)
         　　{
-            anim.SetTrigger("shot");
-            Instantiate(bullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
+
+                if (intervalTime >= 0.25f)
+                {
+                    intervalTime = 0.0f;
+
+                    anim.SetTrigger("shot");
+                    Instantiate(bullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
+                }
        　　 }
         }
 
@@ -159,8 +174,15 @@ public class Player : MonoBehaviour
         if (!gameOver)
         {
             //左キー: -1、右キー: 1
-            float scale = 2.0f; //オブジェクトのサイズ
-        float x = Input.GetAxisRaw("Horizontal")　*　scale;
+            int scale = 2; //オブジェクトのサイズ
+            int x = 0;
+            if (Input.GetKey(KeyCode.LeftArrow) || this.isLButtonDown)
+                {
+				x = -1 * scale;
+			}
+            else if (Input.GetKey(KeyCode.RightArrow) || this.isRButtonDown) {
+				x = 1 * scale;
+			}
         //左か右を入力したら
         if (x != 0)
         {
@@ -186,5 +208,50 @@ public class Player : MonoBehaviour
             anim.SetBool("GameOver", true);
             gameObject.layer = LayerMask.NameToLayer("PlayerDamage");
         }
+    }
+ 
+       //左ボタンを押し続けた場合の処理（追加）
+    public void GetMyLeftButtonDown()
+    {
+        this.isLButtonDown = true;
+    }
+    //左ボタンを離した場合の処理（追加）
+    public void GetMyLeftButtonUp()
+    {
+        this.isLButtonDown = false;
+    }
+
+    //右ボタンを押し続けた場合の処理（追加）
+    public void GetMyRightButtonDown()
+    {
+           this.isRButtonDown = true;
+    }
+    //右ボタンを離した場合の処理（追加）
+    public void GetMyRightButtonUp()
+    {
+        this.isRButtonDown = false;
+    }
+    //右ボタンを押し続けた場合の処理（追加）
+    public void GetMyJumpButtonDown()
+    {
+        if (rigidbody2D.velocity.y < 0.1f)
+        {
+            this.isJumpButtonDown = true;
+        }
+    }
+    //右ボタンを離した場合の処理（追加）
+    public void GetMyJumpButtonUp()
+    {
+        this.isJumpButtonDown = false;
+    }
+    //右ボタンを押し続けた場合の処理（追加）
+    public void GetMyShotButtonDown()
+    {
+        this.isShotButtonDown = true;
+    }
+    //右ボタンを離した場合の処理（追加）
+    public void GetMyShotButtonUp()
+    {
+        this.isShotButtonDown = false;
     }
 }
