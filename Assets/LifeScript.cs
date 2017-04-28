@@ -6,7 +6,7 @@ public class LifeScript : MonoBehaviour
 {
 
     public　RectTransform rt;
-    public GameObject eddy; //ユニティちゃん
+    public GameObject eddy; //Player
     public Text gameOverText; //ゲームオーバーの文字
     private bool gameOver = false; //ゲームオーバー判定
 

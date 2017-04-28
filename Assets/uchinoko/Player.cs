@@ -16,13 +16,14 @@ public class Player : MonoBehaviour
     private bool gameOver = false; //ゲームオーバーしたら操作を無効にする
     private GameObject scoreText;
     private int score = 0;
-    //左ボタン押下の判定（追加）
+    public LayerMask groundLayer; //Linecastで判定するLayer
+    //左ボタン押下の判定
     private bool isLButtonDown = false;
-    //右ボタン押下の判定（追加）
+    //右ボタン押下の判定
     private bool isRButtonDown = false;
-    //Jボタン押下の判定（追加）
+    //Jボタン押下の判定
     private bool isJumpButtonDown = false;
-    //Jボタン押下の判定（追加）
+    //Jボタン押下の判定
     private bool isShotButtonDown = false;
 
     void Start()
@@ -33,14 +34,21 @@ public class Player : MonoBehaviour
         renderer = GetComponent<Renderer>();
         this.scoreText = GameObject.Find("ScoreText");
     }
+   
+    
     //足元に地面があるか判定
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Ground")
+        
+        if (col.gameObject.tag == "Ground" && Physics2D.Linecast(
+        transform.position + transform.up * 0,
+        transform.position - transform.up * 1f,
+        groundLayer)
+)
             isGrounded = true;
         if (!gameOver)
         {
-            //敵がUnityChanとぶつかった時
+            //敵がplayerとぶつかった時
             if (col.gameObject.tag == "enemy")
         {
             anim.SetTrigger("damage"); 
@@ -129,43 +137,43 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        //障害物に衝突した場合
+        //itemrを取得した場合
         if (other.gameObject.tag == "itemr")
         {
-            // スコアを加算(追加)
+            // スコアを加算
             this.score += 100;
 
-            //ScoreText獲得した点数を表示(追加)
+            //ScoreText獲得した点数を表示
             this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
 
             //接触したコインのオブジェクトを破棄
             Destroy(other.gameObject);
         }
 
-        //ゴール地点に到達した場合
+        //itemgを取得した場合
         if (other.gameObject.tag == "itemg")
         {
-            // スコアを加算(追加)
+            // スコアを加算
             this.score += 300;
 
-            //ScoreText獲得した点数を表示(追加)
+            //ScoreText獲得した点数を表示
             this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
 
-            //接触したコインのオブジェクトを破棄
+            //接触したオブジェクトを破棄
             Destroy(other.gameObject);
         }
 
-        //コインに衝突した場合
+        //itemsを取得した場合
         if (other.gameObject.tag == "items")
         {
 
             // スコアを加算(追加)
             this.score += 200;
 
-            //ScoreText獲得した点数を表示(追加)
+            //ScoreText獲得した点数を表示
             this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
 
-            //接触したコインのオブジェクトを破棄
+            //接触したオブジェクトを破棄
             Destroy(other.gameObject);
         }
     }
@@ -234,10 +242,7 @@ public class Player : MonoBehaviour
     //右ボタンを押し続けた場合の処理（追加）
     public void GetMyJumpButtonDown()
     {
-        if (rigidbody2D.velocity.y < 0.1f)
-        {
-            this.isJumpButtonDown = true;
-        }
+       this.isJumpButtonDown = true;
     }
     //右ボタンを離した場合の処理（追加）
     public void GetMyJumpButtonUp()

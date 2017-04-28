@@ -5,7 +5,7 @@ public class elevaterscript : MonoBehaviour
 {
 
     Rigidbody2D rigidbody2D;
-    private float speed = 8.0f;
+    private float speed = 8.5f;
     private float degree = 0;
     void Start()
     {

@@ -7,27 +7,28 @@ public class EnemyGenerator : MonoBehaviour
     public GameObject enemy1;
     public GameObject tank;
     public GameObject robo;
-    private float timeOut = 3;
+    private float timeOut = 4;
     private float timeElapsed;
     private GameObject Player;
-
+    private int enemycount;
     // Use this for initialization
     void Start()
     {
-        //Unityちゃんのオブジェクトを取得
+        //playerのオブジェクトを取得
         this.Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
+ 
+
         timeElapsed += Time.deltaTime;
 
         if (timeElapsed >= timeOut)
         {
             timeElapsed = 0f;
 
-            //==== 敵生成のサンプル===//	
             //表示させる範囲
             Vector2 rangex = new Vector2(-11, 25);
             Vector2 rangey = new Vector2(-2,30);
@@ -43,8 +44,9 @@ public class EnemyGenerator : MonoBehaviour
         Vector3 playerPos = new Vector3(this.Player.transform.position.x, this.Player.transform.position.y, 0);
             //距離を測る
             float length = Vector3.Distance(enemyPos, playerPos);
-        //距離が一定以上なら
-        if (length > 10)
+            enemycount = GameObject.FindGameObjectsWithTag("enemy").Length;
+            //距離が一定以上で敵の数が15以下なら
+            if (length > 10 && enemycount < 25)
         {
             int enemy = Random.Range(1, 10);
             if (1 <= enemy && enemy <= 4)
@@ -61,7 +63,7 @@ public class EnemyGenerator : MonoBehaviour
             }
             else
             {
-                //robo作成    
+                //tank作成    
                 GameObject obj = Instantiate(tank) as GameObject;
                 obj.transform.position = pos;
             }
