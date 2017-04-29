@@ -11,11 +11,13 @@ public class EnemyGenerator : MonoBehaviour
     private float timeElapsed;
     private GameObject Player;
     private int enemycount;
+    private Player player;
     // Use this for initialization
     void Start()
     {
         //playerのオブジェクトを取得
         this.Player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("eddy").GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -48,21 +50,21 @@ public class EnemyGenerator : MonoBehaviour
             //距離が一定以上で敵の数が15以下なら
             if (length > 10 && enemycount < 25)
         {
-            int enemy = Random.Range(1, 10);
-            if (1 <= enemy && enemy <= 4)
+            int enemy = Random.Range(1, 15);
+            if (1 <= enemy && enemy <= 6)
             {
                 //enemy1を生成
                 GameObject obj = Instantiate(enemy1);
                 obj.transform.position = pos;
-            }
-            else if (5 <= enemy && enemy <= 8)
+                }
+            else if (7 <= enemy && enemy <= 12)
             {
                 //robo作成    
                 GameObject obj = Instantiate(robo) as GameObject;
                 obj.transform.position = pos;
             }
-            else
-            {
+                else if (12 <= enemy && enemy <= 15)
+                {
                 //tank作成    
                 GameObject obj = Instantiate(tank) as GameObject;
                 obj.transform.position = pos;

@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
             //ScoreText獲得した点数を表示
             this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
 
-            //接触したコインのオブジェクトを破棄
+            //接触したオブジェクトを破棄
             Destroy(other.gameObject);
         }
 
@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //横移動の速度を0にしてピタッと止まるようにする
+            //横移動の速度を0にして止まるようにする
             rigidbody2D.velocity = new Vector2(0, rigidbody2D.velocity.y);
             //Dash→Wait
             anim.SetBool("Dash", false);
@@ -218,43 +218,43 @@ public class Player : MonoBehaviour
         }
     }
  
-       //左ボタンを押し続けた場合の処理（追加）
+       //左ボタンを押し続けた場合の処理
     public void GetMyLeftButtonDown()
     {
         this.isLButtonDown = true;
     }
-    //左ボタンを離した場合の処理（追加）
+    //左ボタンを離した場合の処理
     public void GetMyLeftButtonUp()
     {
         this.isLButtonDown = false;
     }
 
-    //右ボタンを押し続けた場合の処理（追加）
+    //右ボタンを押し続けた場合の処理
     public void GetMyRightButtonDown()
     {
            this.isRButtonDown = true;
     }
-    //右ボタンを離した場合の処理（追加）
+    //右ボタンを離した場合の処理
     public void GetMyRightButtonUp()
     {
         this.isRButtonDown = false;
     }
-    //右ボタンを押し続けた場合の処理（追加）
+    //右ボタンを押し続けた場合の処理
     public void GetMyJumpButtonDown()
     {
        this.isJumpButtonDown = true;
     }
-    //右ボタンを離した場合の処理（追加）
+    //右ボタンを離した場合の処理
     public void GetMyJumpButtonUp()
     {
         this.isJumpButtonDown = false;
     }
-    //右ボタンを押し続けた場合の処理（追加）
+    //右ボタンを押し続けた場合の処理
     public void GetMyShotButtonDown()
     {
         this.isShotButtonDown = true;
     }
-    //右ボタンを離した場合の処理（追加）
+    //右ボタンを離した場合の処理
     public void GetMyShotButtonUp()
     {
         this.isShotButtonDown = false;

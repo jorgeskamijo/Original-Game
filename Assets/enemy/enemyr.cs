@@ -31,7 +31,7 @@ public class enemyr : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        //UnityChanとぶつかった時
+        //playerとぶつかった時
         if (col.gameObject.tag == "eddy")
         {
             //LifeScriptのLifeDownメソッドを実行

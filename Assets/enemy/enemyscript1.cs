@@ -31,7 +31,7 @@ public class enemyscript1 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        //UnityChanとぶつかった時
+        //playerとぶつかった時
         if (col.gameObject.tag == "eddy")
         {
             //LifeScriptのLifeDownメソッドを実行

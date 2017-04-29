@@ -7,13 +7,14 @@ public class enemyscript : MonoBehaviour
     Rigidbody2D rigidbody2D;
         private float speed = 1.5f;
 
+    float intervalTime;
     public GameObject itemg;
     private int hp = 10;
     public int ap = 64;
     private LifeScript lifeScript;
     private Transform player;
     public GameObject explosion;
-
+    public GameObject enemybullet;
 
     void Start()
     {
@@ -32,7 +33,7 @@ public class enemyscript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        //UnityChanとぶつかった時
+        //playerとぶつかった時
         if (col.gameObject.tag == "eddy")
         {
             //LifeScriptのLifeDownメソッドを実行
@@ -57,6 +58,18 @@ public class enemyscript : MonoBehaviour
             Vector2 temp = transform.localScale;
             temp.x = 4;
             transform.localScale = temp; ;
+        }
+
+        intervalTime += Time.deltaTime;
+        if (Input.GetKeyDown("left ctrl") )
+        {
+
+            if (intervalTime >= 5.5f)
+            {
+                intervalTime = 0.0f;
+
+                Instantiate(enemybullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
+            }
         }
 
         if (hp == 0)
