@@ -9,10 +9,12 @@ public class LifeScript : MonoBehaviour
     public GameObject eddy; //Player
     public Text gameOverText; //ゲームオーバーの文字
     private bool gameOver = false; //ゲームオーバー判定
+    private Player player;
 
     void Start()
     {
         rt = GetComponent<RectTransform>();
+        player = GameObject.FindGameObjectWithTag("eddy").GetComponent<Player>();
     }
     void Update()
     {
@@ -28,10 +30,15 @@ public class LifeScript : MonoBehaviour
             //ゲームオーバーの文字を表示
             gameOverText.enabled = true;
             //画面をクリックすると
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && player.score >= 10000)
             {
-                //タイトルへ戻る
-                Application.LoadLevel("Title");
+                //end2へ進む
+                Application.LoadLevel("end2");
+            }
+            if (Input.GetMouseButtonDown(0) && player.score < 10000)
+            {
+                //endへ進む
+                Application.LoadLevel("end");
             }
         }
     }

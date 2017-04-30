@@ -5,9 +5,10 @@ public class enemyscript : MonoBehaviour
 {
 
     Rigidbody2D rigidbody2D;
-        private float speed = 1.5f;
+    private float speed = 1.5f;
 
     float intervalTime;
+    public GameObject itemblue;
     public GameObject itemg;
     private int hp = 10;
     public int ap = 64;
@@ -27,7 +28,11 @@ public class enemyscript : MonoBehaviour
     {
         if (col.tag == "bullet")
         {
-            this.hp　--;
+            this.hp--;
+        }
+        if (col.tag == "spbullet")
+        {
+            this.hp -= 5;
         }
     }
 
@@ -49,9 +54,9 @@ public class enemyscript : MonoBehaviour
         transform.position = transform.position + (direction * speed * Time.deltaTime);
         if (direction.x >= 0)
         {
-　　　　　　 Vector2 temp = transform.localScale;
+            Vector2 temp = transform.localScale;
             temp.x = -4;
-            transform.localScale = temp; ; 
+            transform.localScale = temp; ;
         }
         else
         {
@@ -61,24 +66,28 @@ public class enemyscript : MonoBehaviour
         }
 
         intervalTime += Time.deltaTime;
-        if (Input.GetKeyDown("left ctrl") )
+
+
+        if (intervalTime >= 5.5f)
+        {
+            intervalTime = 0.0f;
+
+            Instantiate(enemybullet, transform.position + new Vector3(0f, 0.3f, 0f), transform.rotation);
+        }
+
+
+        if (hp <= 0)
         {
 
-            if (intervalTime >= 5.5f)
+            Destroy(gameObject);
+            Instantiate(explosion, transform.position, transform.rotation);
+            Instantiate(itemg, transform.position, transform.rotation);
+            //26分の一の確率でアイテムを落とす
+            if (Random.Range(0, 25) == 0)
             {
-                intervalTime = 0.0f;
-
-                Instantiate(enemybullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
+                Instantiate(itemblue, transform.position + new Vector3(0.5f, 0f, 0f), transform.rotation);
             }
         }
 
-        if (hp == 0)
-        {
-                        
-                Destroy(gameObject);
-            Instantiate(explosion, transform.position, transform.rotation);
-            Instantiate(itemg, transform.position, transform.rotation);
-        }
     }
-
-}
+} 

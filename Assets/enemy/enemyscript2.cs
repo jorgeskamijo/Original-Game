@@ -5,8 +5,8 @@ public class enemyscript2 : MonoBehaviour
 {
 
     Rigidbody2D rigidbody2D;
-    private float speed = 3f;
-
+    private float speed = 2.8f;
+    public GameObject itemblue;
     public GameObject items;
     private int hp = 4;
     public int ap = 64;
@@ -25,6 +25,10 @@ public class enemyscript2 : MonoBehaviour
         if (col.tag == "bullet")
         {
             this.hp--;
+        }
+        if (col.tag == "spbullet")
+        {
+            this.hp -= 5;
         }
     }
 
@@ -57,12 +61,16 @@ public class enemyscript2 : MonoBehaviour
             transform.localScale = temp; ;
         }
 
-        if (hp == 0)
+        if (hp <= 0)
         {
 
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
             Instantiate(items, transform.position, transform.rotation);
+            if (Random.Range(0, 35) == 0)
+            {
+                Instantiate(itemblue, transform.position + new Vector3(0.5f, 0f, 0f), transform.rotation);
+            }
         }
     }
 

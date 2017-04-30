@@ -6,7 +6,7 @@ public class enemyscript1 : MonoBehaviour
 
     Rigidbody2D rigidbody2D;
     private float speed = 2.2f;
-
+    public GameObject itemblue;
     public GameObject itemr;
     private int hp = 2;
     public int ap = 64;
@@ -27,6 +27,10 @@ public class enemyscript1 : MonoBehaviour
         {
             this.hp--;
         }
+        if (col.tag == "spbullet")
+        {
+            this.hp -= 5;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -41,7 +45,7 @@ public class enemyscript1 : MonoBehaviour
 
     void Update()
     {
-        Vector3 playerPos = player.position;    //プレイヤーの位置
+        Vector3 playerPos = player.position;    //playerの位置
         Vector3 direction = playerPos - transform.position; //方向
         direction = direction.normalized;   //単位化（距離要素を取り除く）
         transform.position = transform.position + (direction * speed * Time.deltaTime);
@@ -58,12 +62,16 @@ public class enemyscript1 : MonoBehaviour
             transform.localScale = temp; ;
         }
 
-        if (hp == 0)
+        if (hp <= 0)
         {
 
             Destroy(gameObject);
             Instantiate(explosion, transform.position, transform.rotation);
             Instantiate(itemr, transform.position, transform.rotation);
+            if (Random.Range(0, 35) == 0)
+            {
+                Instantiate(itemblue, transform.position + new Vector3(0.5f, 0f, 0f), transform.rotation);
+            }
         }
     }
 

@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed = 4f; //歩くスピード
     public float jumpPower = 750; //ジャンプ力
     public GameObject bullet;
+    public GameObject spbullet;
     private Rigidbody2D rigidbody2D;
     private Animator anim;
     private bool isGrounded; //着地判定
@@ -15,8 +16,10 @@ public class Player : MonoBehaviour
     public LifeScript lifeScript;
     private bool gameOver = false; //ゲームオーバーしたら操作を無効にする
     private GameObject scoreText;
-    private int score = 0;
+    public int score = 0;
     public LayerMask groundLayer; //Linecastで判定するLayer
+    public int bulletcount;
+    public Image image;
     //左ボタン押下の判定
     private bool isLButtonDown = false;
     //右ボタン押下の判定
@@ -33,6 +36,7 @@ public class Player : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         renderer = GetComponent<Renderer>();
         this.scoreText = GameObject.Find("ScoreText");
+        bulletcount = 0;
     }
    
     
@@ -40,21 +44,17 @@ public class Player : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         
-        if (col.gameObject.tag == "Ground" && Physics2D.Linecast(
-        transform.position + transform.up * 0,
-        transform.position - transform.up * 1f,
-        groundLayer)
-)
+        if (col.gameObject.tag == "Ground" && Physics2D.Linecast(transform.position + transform.up * 0,transform.position - transform.up * 1f,groundLayer))
             isGrounded = true;
         if (!gameOver)
         {
             //敵がplayerとぶつかった時
             if (col.gameObject.tag == "enemy")
-        {
+            {
             anim.SetTrigger("damage"); 
             
 			StartCoroutine ("Damage");
-		}
+            }
         }
     }
 	
@@ -64,7 +64,8 @@ public class Player : MonoBehaviour
 		gameObject.layer = LayerMask.NameToLayer("PlayerDamage");
 		//while文を10回ループ
 		int count = 20;
-		while (count > 0){
+		while (count > 0)
+        {
 			//透明にする
 			renderer.material.color = new Color (1,1,1,0);
 			//0.05秒待つ
@@ -83,6 +84,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (bulletcount >= 1)
+        {
+            image.enabled = true;
+        }
+        if (bulletcount < 1)
+        {
+            image.enabled = false;
+        }
+
         if (lifeScript.rt.sizeDelta.x <= 0)
         {
             //ゲームオーバー判定をtrue
@@ -104,7 +114,7 @@ public class Player : MonoBehaviour
                 //AddForceにて上方向へ力を加える
                 rigidbody2D.AddForce(Vector2.up * jumpPower);
            　 }
-       　　 }
+            }
         }
         //上下への移動速度を取得
         float velY = rigidbody2D.velocity.y;
@@ -121,13 +131,23 @@ public class Player : MonoBehaviour
             intervalTime += Time.deltaTime;
             if (Input.GetKeyDown("left ctrl") || this.isShotButtonDown)
         　　{
-
-                if (intervalTime >= 0.25f)
+                //bulletcountが０なら通常弾
+                if (intervalTime >= 0.25f　&&　bulletcount <= 0)
                 {
                     intervalTime = 0.0f;
 
                     anim.SetTrigger("shot");
                     Instantiate(bullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
+                }
+                //bulletcountが1以上なら貫通強化弾
+            
+                if (intervalTime >= 0.25f && bulletcount >= 1)
+                {
+                    intervalTime = 0.0f;
+
+                    anim.SetTrigger("shot");
+                    Instantiate(spbullet, transform.position + new Vector3(0f, 0.2f, 0f), transform.rotation);
+                    bulletcount -- ;
                 }
        　　 }
         }
@@ -176,6 +196,40 @@ public class Player : MonoBehaviour
             //接触したオブジェクトを破棄
             Destroy(other.gameObject);
         }
+
+        //itemgを取得した場合
+        if (other.gameObject.tag == "itemd")
+        {
+            // スコアを加算
+            this.score += 500;
+
+            //ScoreText獲得した点数を表示
+            this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
+
+            //接触したオブジェクトを破棄
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "itemp")
+        {
+            // スコアを加算
+            this.score += 400;
+
+            //ScoreText獲得した点数を表示
+            this.scoreText.GetComponent<Text>().text = "Score " + this.score + "pt";
+
+            //接触したオブジェクトを破棄
+            Destroy(other.gameObject);
+        }
+
+        //itemblueを取得した場合
+        if (other.gameObject.tag == "itemblue")
+        {
+            // 強化弾
+            this.bulletcount ++;
+            //接触したオブジェクトを破棄
+            Destroy(other.gameObject);
+        }
     }
   void FixedUpdate()
     {
@@ -185,10 +239,11 @@ public class Player : MonoBehaviour
             int scale = 2; //オブジェクトのサイズ
             int x = 0;
             if (Input.GetKey(KeyCode.LeftArrow) || this.isLButtonDown)
-                {
+            {
 				x = -1 * scale;
 			}
-            else if (Input.GetKey(KeyCode.RightArrow) || this.isRButtonDown) {
+            else if (Input.GetKey(KeyCode.RightArrow) || this.isRButtonDown)
+            {
 				x = 1 * scale;
 			}
         //左か右を入力したら
@@ -212,13 +267,14 @@ public class Player : MonoBehaviour
             anim.SetBool("Dash", false);
         }
         }
-        if (gameOver) {
+        if (gameOver)
+        {
             anim.SetBool("GameOver", true);
             gameObject.layer = LayerMask.NameToLayer("PlayerDamage");
         }
     }
  
-       //左ボタンを押し続けた場合の処理
+    //左ボタンを押し続けた場合の処理
     public void GetMyLeftButtonDown()
     {
         this.isLButtonDown = true;
